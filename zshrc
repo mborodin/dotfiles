@@ -43,7 +43,9 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man colorize git-extras git-flow github git-hubflow sbt scala vi-mode)
+plugins=(git colored-man colorize git-extras git-flow github git-hubflow sbt scala vi-mode dirhistory  docker gitfast python tmux yum)
+
+ZSH_TMUX_AUTOSTART="true"
 
 source $ZSH/oh-my-zsh.sh
 
