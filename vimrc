@@ -24,6 +24,15 @@ Plugin 'klen/python-mode'
 Plugin 'Matt-Stevens/vim-systemd-syntax'
 " The bundles you install will be listed here
 
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mhinz/vim-startify'
+Plugin 'milkypostman/vim-togglelist'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdcommenter'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -79,20 +88,20 @@ set autochdir
 
 set listchars=tab:»\ ,eol:¬
 set list listchars=tab:»·,trail:·
-nmap l :set list!
-
 set nu
 
 syntax enable
 set background=dark
 colorscheme solarized
 
-imap <C-s>l <ESC>:set invnumber<CR>i
-nmap <leader>l :set invnumber<CR>
-imap <C-F2> <ESC>:set paste<CR>i
-nmap <C-F2> :set paste<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+inoremap <F1> <ESC>:set invnumber<CR>i
+nnoremap <F1> :set invnumber<CR>
 imap <C-L> <ESC>:NERDTreeToggle<CR>i
-nmap <C-L> :NERDTreeToggle<CR>
+nmap ,l :NERDTreeToggle<CR>
 
 "let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
 :au BufNewFile,BufRead *.py set colorcolumn=80
