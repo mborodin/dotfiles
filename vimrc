@@ -1,28 +1,30 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-bufferline'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'techlivezheng/vim-plugin-minibufexpl'
-Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'klen/python-mode'
-Bundle 'Matt-Stevens/vim-systemd-syntax'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'techlivezheng/vim-plugin-minibufexpl'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+Plugin 'Matt-Stevens/vim-systemd-syntax'
 " The bundles you install will be listed here
+
+call vundle#end()
 
 filetype plugin indent on
 
@@ -93,4 +95,4 @@ imap <C-L> <ESC>:NERDTreeToggle<CR>i
 nmap <C-L> :NERDTreeToggle<CR>
 
 "let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
-set colorcolumn=81
+:au BufNewFile,BufRead *.py set colorcolumn=80
