@@ -24,7 +24,8 @@ Plugin 'klen/python-mode'
 Plugin 'Matt-Stevens/vim-systemd-syntax'
 " The bundles you install will be listed here
 
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Yggdroot/indentLine'
 Plugin 'mhinz/vim-startify'
 Plugin 'milkypostman/vim-togglelist'
 Plugin 'Raimondi/delimitMate'
@@ -80,9 +81,15 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
 " Indent guides configuration
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indentLine_color_bg_term = 'black'
+let g:indentLine_color_term = 'darkGray'
+"let g:indentLine_char = '┆'
+"let g:indentLine_char = '¦'
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 " Tabs
 set tabstop=4
@@ -131,6 +138,7 @@ inoremap <F1> <ESC>:set invnumber<CR>i
 nnoremap <F1> :set invnumber<CR>
 imap <C-L> <ESC>:NERDTreeToggle<CR>i
 nmap ,l :NERDTreeToggle<CR>
+inoremap <silent> <C-I> <ESC><Plug>IndentGuidesToggle<CR>i
 
 "let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
 :au BufNewFile,BufRead *.py set colorcolumn=80
