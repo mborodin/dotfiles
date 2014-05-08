@@ -138,7 +138,18 @@ inoremap <F1> <ESC>:set invnumber<CR>i
 nnoremap <F1> :set invnumber<CR>
 imap <C-L> <ESC>:NERDTreeToggle<CR>i
 nmap ,l :NERDTreeToggle<CR>
-inoremap <silent> <C-I> <ESC><Plug>IndentGuidesToggle<CR>i
+"inoremap <silent> <C-I> <ESC><Plug>IndentGuidesToggle<CR>i
+map <silent> <C-C> <plug>NERDCommenterToggle
+imap <silent> <C-C> <ESC><plug>NERDCommenterToggle<CR>i
+inoremap <silent> <C-V> <ESC>v
+inoremap <silent> <C-X><C-V> <ESC><C-v>
+map <silent> <C-Z> u
+imap <silent> <C-Z> <ESC>ui
+imap <silent> <C-Q> <ESC>ddi
+imap <silent> <C-Y> <ESC>yyi
+imap <silent> <C-P> <ESC>pi
+imap <silent> <C-D> <C-Y><C-P>
+
 
 "let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
 :au BufNewFile,BufRead *.py set colorcolumn=80
