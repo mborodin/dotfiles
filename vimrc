@@ -46,7 +46,6 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-set laststatus=2
 
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
@@ -80,20 +79,50 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
+" Indent guides configuration
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+" Tabs
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
+set smarttab
+
+" Show tabs and spaces
+set listchars=tab:»\ ,eol:¬
+set list listchars=tab:»·,trail:·
+
+" Indents
+set autoindent
+set cindent
+set cinoptions=:s,ps,ts,cs
+set cinwords=if,else,while,do,for,switch,case
+
 
 set autochdir
 
-set listchars=tab:»\ ,eol:¬
-set list listchars=tab:»·,trail:·
-set nu
-
 syntax enable
+filetype plugin indent on
+
+" Visual stuff
+set nu " Line numbering
+set showmatch " Show matching brackets
+set matchtime=5 " Bracket blinking
+set laststatus=2 " Always show status line
+
+" Folding
+set foldenable " Turn on folding
+set foldmethod=marker " Fold on the marker
+set foldlevel=100 " Don't autofold anything (but I can still fold manually)
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
+
 set background=dark
 colorscheme solarized
 
+" Paste mode toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
