@@ -1,0 +1,18 @@
+
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+#
+# Старые кириллические символы, Україна, Беларусь
+#
+<Multi_key> <Cyrillic_softsign> : "ѣ" U0463 # U+0463 CYRILLIC SMALL LETTER YAT
+<Multi_key> <Cyrillic_SOFTSIGN> : "Ѣ" U0462 # U+0462 CYRILLIC CAPITAL LETTER YAT
+<Multi_key> <Cyrillic_yeru> : "і" U0456 # U+0456 CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <Cyrillic_YERU> : "І" U0406 # U+0406 CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
+<Multi_key> <Cyrillic_hardsign> : "ї" U0457 # U+0457 CYRILLIC SMALL LETTER YI
+<Multi_key> <Cyrillic_HARDSIGN> : "Ї" U0407 # U+0407 CYRILLIC CAPITAL LETTER YI
+<Multi_key> <Cyrillic_e> : "є" U0454 # U+0454 CYRILLIC SMALL LETTER UKRAINIAN IE (Old Cyrillic yest)
+<Multi_key> <Cyrillic_E> : "Є" U0404 # U+0404 CYRILLIC CAPITAL LETTER UKRAINIAN IE
+<Multi_key> <Cyrillic_u> : "ў" U045E # U+045E CYRILLIC SMALL LETTER SHORT U
+<Multi_key> <Cyrillic_U> : "Ў" U040E # U+040E CYRILLIC CAPITAL LETTER SHORT U
+
+
